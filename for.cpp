@@ -16,6 +16,7 @@ main()
 	/* CONFIGURAÇÃO DE CARACTERES */
 		setlocale(LC_ALL, "portuguese");
 	
+	
 	/* TITULO DO PROGRAMA */	
 		puts("CALCULADOR DE MÉDIA (finito)");
 	
