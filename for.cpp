@@ -2,7 +2,7 @@
 	Name: Laços_3.cpp
 	Author: Lucas Mateus
 	Date: 18/04/23 07:54
-	Description: Programa para calcular a media de 7 números usando o for
+	Description: Programa para calcular a tabuada de um nº com o for
 */
 
 
