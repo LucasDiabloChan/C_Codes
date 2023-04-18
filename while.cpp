@@ -1,11 +1,11 @@
 /*
-	Name: LaÁos_1.cpp
+	Name: La√ßos_2.cpp
 	Author: Lucas Mateus
 	Date: 18/04/23 07:54
-	Description: Programa para calcular a media de 7 n˙meros usando o while
+	Description: Programa para calcular a media de 7 n√∫meros usando o while
 */
 
-/* IMPORTA«’ES */
+/* IMPORTA√á√ïES */
 #include <stdio.h>
 #include <iostream>
 
@@ -15,12 +15,12 @@ main()
 	setlocale(LC_ALL, "portuguese");
 	
 	
-	/* VARI¡VEIS */
+	/* VARI√ÅVEIS */
 	int i, num, soma;
 	float med;
 	
 	
-	/* INICIALIZA«√O DE VARI¡VEIS */
+	/* INICIALIZA√á√ÉO DE VARI√ÅVEIS */
 	i = num = soma = 0;
 	med = 0.0;
 	
@@ -39,13 +39,13 @@ main()
 	}
 		
 	
-	/* CALCULA A M…DIA */
+	/* CALCULA A M√âDIA */
 	med = (float) soma/i;
 	
 	
-	/* EXIBI«√O DE VALORES */
+	/* EXIBI√á√ÉO DE VALORES */
 		printf("\nVALORES: \n\n");
 		printf("\nContador: %d", i);
 		printf("\nSoma: %d", soma);
-		printf("\nA mÈdia È: %f", med);
+		printf("\nA m√©dia √©: %f", med);
 }
