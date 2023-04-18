@@ -1,42 +1,41 @@
 /*
-	Name: LaÁos_3.cpp
+	Name: La√ßos_3.cpp
 	Author: Lucas Mateus
 	Date: 18/04/23 07:54
-	Description: Programa para calcular a media de 7 n˙meros usando o for
+	Description: Programa para calcular a media de 7 n√∫meros usando o for
 */
 
 
-/* IMPORTA«’ES */
+/* IMPORTA√á√ïES */
 # include <stdio.h>
 # include <iostream>
 # include <locale.h>
 
 main()
 {
-	/* CONFIGURA«√O DE CARACTERES */
+	/* CONFIGURA√á√ÉO DE CARACTERES */
 		setlocale(LC_ALL, "portuguese");
 	
 	/* TITULO DO PROGRAMA */	
-		puts("CALCULADOR DE M…DIA (finito)");
+		puts("CALCULADOR DE M√âDIA (finito)");
 	
 	
-	/* BLOCO DE VARI¡VEIS */
+	/* BLOCO DE VARI√ÅVEIS */
 		int num;
 
-	/* INICIALIZA«√O DE VARI¡VEIS */
+	
+	/* INICIALIZA√á√ÉO DE VARI√ÅVEIS */
 		num = 0;
 	
-	/* PEGA O N⁄MERO PARA FAZER A TABUADA */
-		printf("Insira um n˙mero: ");
+	
+	/* PEGA O N√öMERO PARA FAZER A TABUADA */
+		printf("Insira um n√∫mero: ");
 		scanf("%d", &num);
 	
-	/* IMPRIME A TABUADA A PARTIR DO N∫ INSERIDO */
+	
+	/* IMPRIME A TABUADA A PARTIR DO N¬∫ INSERIDO */
 		for(int i = 1; i <= num; i++){
 			
 			printf("\n%d X %d = %d", num, i, num * i);
 		}
-		
-		
-	
-		
 }
