@@ -11,36 +11,6 @@
 #define arrTam 5
 
 // ================================================
-// Retorna o maior valor presente no array
-// ================================================
-int getMaiorValor(int *array, int arrSize)
-{
-    int i, maiorValor = INT_MIN;
-    
-    for(i = 0; i < arrSize; i++){
-        if(maiorValor < array[i])
-            maiorValor = array[i];
-    }
-    
-    return maiorValor;
-}
-
-// ================================================
-// Retorna o menor valor presente no array
-// ================================================
-int getMenorValor(int *array, int arrSize)
-{
-    int i, menorValor = INT_MAX;
-    
-    for(i = 0; i < arrSize; i++){
-        if(menorValor > array[i])
-            menorValor = array[i];
-    }
-    
-    return menorValor;
-}
-
-// ================================================
 // Retorna o array ordenado
 // ================================================
 int* getArrayOrdenado(int *array, int size)
