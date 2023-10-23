@@ -20,8 +20,8 @@ int main()
     
     printf("Primeira string: %s\n", palavra1_1);
     printf("Segunda string: %s\n", palavra1_2);
-    printf("Concatenação convencional: %s_%s\n", palavra1_1, palavra1_2);
-    printf("Concatenação convencional: %s\n", strcat(palavra1_1, palavra1_2));
+    printf("Concatenação (convencional): %s_%s\n", palavra1_1, palavra1_2);
+    printf("Concatenação (com strcat): %s\n", strcat(palavra1_1, palavra1_2));
 
     return 0;
 }
