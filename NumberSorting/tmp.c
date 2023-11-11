@@ -3,23 +3,38 @@
 
 #include <stdio.h>
 #include <locale.h>
-// = = = = = = = = = = =
+// = = = = = = = = = = = = = = 
 
-void getValues(float *memToSave)
-{
-    printf("Insert three values above: ");
+int main() {
     
-    printf("\n1º - "); 
-    scanf("%f", &memToSave[0]);
+    float values[3], orderedValues[3];
     
-    printf("\n2º - "); 
-    scanf("%f", &memToSave[1]);
+    getValues(&values);
     
-    printf("\n3º - "); 
-    scanf("%f", &memToSave[2]);
+    puts("ANTES DE ORDENAR");
+    printf("1º pos: %f", values[0]);
+    printf("\n2º pos: %f", values[1]);
+    printf("\n3º pos: %f\n\n", values[2]);
+    
+    getOrderedValues(&values, &orderedValues);
+    
+    puts("DEPOIS DE ORDENAR");
+    printf("1º pos: %f", orderedValues[0]);
+    printf("\n2º pos: %f", orderedValues[1]);
+    printf("\n3º pos: %f", orderedValues[2]);
+
+    return 0;
 }
 
-void orderValues(float *valuesToOrder, float *orderedValues)
+void getValues(int *memToSave)
+{
+    puts("Insert three values above: ");
+    printf("1º - "); scanf("%f", &memToSave[0]);
+    printf("\n2º - "); scanf("%f", &memToSave[1]);
+    printf("\n3º - "); scanf("%f", &memToSave[2]);
+}
+
+void getOrderedValues(int *valuesToOrder, int *orderedValues)
 {
     if(valuesToOrder[0] >= valuesToOrder[1]) // se 1º>2º
     {
@@ -65,26 +80,4 @@ void orderValues(float *valuesToOrder, float *orderedValues)
             orderedValues[2] = valuesToOrder[0];
         }
     }
-}
-
-int main() {
-    
-    float values[3], orderedValues[3];
-    
-    getValues(values);
-    
-    printf("\nBEFORE ORDERING");
-    printf("\n1º pos: %.0f", values[0]);
-    printf("\n2º pos: %.0f", values[1]);
-    printf("\n3º pos: %.0f", values[2]);
-    
-    orderValues(values, orderedValues);
-    
-    printf("\nAFTER ORDERING");
-    printf("\n1º pos: %.0f", orderedValues[0]);
-    printf("\n2º pos: %.0f", orderedValues[1]);
-    printf("\n3º pos: %.0f", orderedValues[2]);
-
-    getchar();
-    return 0;
 }
