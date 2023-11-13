@@ -12,7 +12,7 @@ char getWord(char *phrase, char *placeToSave)
     int i, phraseSize = strlen(phrase);
     
     char *word;
-    word = (char*)malloc(phraseSize);
+    word = (char*)calloc(phraseSize+1, sizeof(char));
 
     for(i = 0; i < phraseSize; i++)
     {
@@ -30,7 +30,7 @@ char getWord(char *phrase, char *placeToSave)
             }
         }
     }
-
+    word[i] = '\0';
     strcpy(placeToSave, word);
     free(word);
 }
@@ -45,6 +45,7 @@ void generateCombinedPhrase(char *primeiraFrase, char *segundaFrase, char *frase
         if(hasMoreWordsPhrase1)
         {
             char *firstWord;
+            firstWord = (char*) calloc(strlen(primeiraFrase), sizeof(char));
             getWord(primeiraFrase, firstWord);
             
             if(strlen(firstWord) != 0)
@@ -56,6 +57,7 @@ void generateCombinedPhrase(char *primeiraFrase, char *segundaFrase, char *frase
         if(hasMoreWordsPhrase2)
         {
             char *secondWord;
+            secondWord = (char*) calloc(strlen(segundaFrase), sizeof(char));
             getWord(segundaFrase, secondWord);
             
             if(strlen(secondWord) != 0)
@@ -78,5 +80,5 @@ int main()
 
     generateCombinedPhrase(primeiraFrase, segundaFrase, fraseCombinada);
 
-    printf("Frase combinada: \n%s", fraseCombinada);
+    printf("Frase combinada: \n%s\n", fraseCombinada);
 }
