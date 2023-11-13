@@ -3,25 +3,16 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdbool.h>
 // = = = = = = = = = = = = = = 
 
-// receber primeira frase
-    // receber primeira frase
-
-// receber a segunda frase
-    // armazenar a segunda frase
-
-// criar a terceira frase
-    // pegar uma palavra da primeira string
-    // pegar uma palavra da segunda string
-
-// mostrar a frase criada
-
-// - - - - - - - - - - - - - - 
-char getWord(char *phrase)
+char getWord(char *phrase, char *placeToSave)
 {
     int i, phraseSize = strlen(phrase);
-    char word[phraseSize];
+    
+    char *word;
+    word = (char*)malloc(phraseSize);
 
     for(i = 0; i < phraseSize; i++)
     {
@@ -40,34 +31,37 @@ char getWord(char *phrase)
         }
     }
 
-    return word;
+    strcpy(placeToSave, word);
+    free(word);
 }
 
 void generateCombinedPhrase(char *primeiraFrase, char *segundaFrase, char *fraseCombinada)
 {
-    int tokenFirstPhrase, tokenSecondPhrase;
-    tokenFirstPhrase = tokenSecondPhrase = 1;
+    bool hasMoreWordsPhrase1, hasMoreWordsPhrase2;
+    hasMoreWordsPhrase1 = hasMoreWordsPhrase2 = true;
     
-    while(tokenFirstPhrase == 1 || tokenSecondPhrase == 1)
+    while(hasMoreWordsPhrase1 || hasMoreWordsPhrase2)
     {
-        if(tokenFirstPhrase != 0)
+        if(hasMoreWordsPhrase1)
         {
-            char *firstWord = getWord(primeiraFrase);
+            char *firstWord;
+            getWord(primeiraFrase, firstWord);
             
             if(strlen(firstWord) != 0)
                 strcat(fraseCombinada, firstWord);
             else
-                tokenFirstPhrase = 0;
+                hasMoreWordsPhrase1 = false;
         }
         
-        if(tokenSecondPhrase != 0)
+        if(hasMoreWordsPhrase2)
         {
-            char *secondWord = getWord(segundaFrase);
+            char *secondWord;
+            getWord(segundaFrase, secondWord);
             
             if(strlen(secondWord) != 0)
                 strcat(fraseCombinada, secondWord);
             else
-                tokenSecondPhrase = 0;
+                hasMoreWordsPhrase2 = false;
         }
     }
 }
