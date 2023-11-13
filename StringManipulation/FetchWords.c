@@ -18,9 +18,9 @@
 // mostrar a frase criada
 
 // - - - - - - - - - - - - - - 
-char* getWord(char *phrase)
+char getWord(char *phrase)
 {
-    int i, phraseSize = sizeof(phrase)/sizeof(phrase[0]);
+    int i, phraseSize = strlen(phrase);
     char word[phraseSize];
 
     for(i = 0; i < phraseSize; i++)
