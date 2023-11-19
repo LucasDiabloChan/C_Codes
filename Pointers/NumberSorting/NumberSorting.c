@@ -1,5 +1,6 @@
 // @AsherLucRen 
-// Recebe 3 valores e retorna-os ordenados. Caso sejam iguais a função retorna 1 e retorna 0 se distintos.  
+// Recebe 3 valores e retorna-os ordenados. 
+// Caso sejam iguais a função retorna 1 e retorna 0 se distintos. (5th list, exercise 5)  
 
 #include <stdio.h>
 #include <locale.h>
